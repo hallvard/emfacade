@@ -1,0 +1,484 @@
+package org.eclipse.gmt.emfacade.swt
+
+import org.eclipse.swt.SWT
+import org.eclipse.swt.widgets
+import org.eclipse.swt.graphics
+import org.eclipse.swt.graphics.Point
+import org.eclipse.jface.viewers
+
+abstract class Widget {
+	derived transient volatile readonly int style
+}
+
+abstract class Layout<T extends LayoutData> {}
+abstract class LayoutData {}
+
+abstract class Control extends Widget {
+	refers AbstractComposite<Control> parent
+	BorderStyle borderStyle
+	TextOrientationStyle textOrientationStyle
+	contains LayoutData layoutData
+	boolean enabled = "true"
+	boolean visible = "true"
+	boolean touchEnabled
+	String toolTipText
+	contains Color background
+	contains Font font
+	Point size
+}
+
+abstract class AbstractComposite<T extends Control> extends Control {
+	contains T[*] controls opposite parent
+	contains Layout<LayoutData> layout
+}
+
+class Composite extends AbstractComposite<Control> {
+}
+
+class Group extends Composite {
+	String text
+}
+
+class Canvas extends Composite {
+}
+
+abstract class Decorations extends Canvas {
+	boolean maximized
+	boolean minimized
+	contains MenuBar menuBar opposite parent
+}
+
+class Shell extends Decorations {
+	ModalStyle modalStyle
+	TrimStyle trimStyle
+	boolean fullScreen
+	int alpha = "255"
+	refers Button defaultButton
+}
+
+abstract class AbstractMenu extends Widget {
+	TextOrientationStyle textOrientationStyle
+	boolean enabled = "true"
+	boolean visible = "true"
+	contains MenuItem[*] items
+}
+
+class Menu extends AbstractMenu {
+	MenuStyle menuStyle
+	refers MenuItem parentItem opposite menu
+}
+
+class MenuBar extends AbstractMenu {
+	refers Decorations parent opposite menuBar
+}
+
+abstract class Labeled {
+	String text
+	ImageRef image
+}
+
+abstract class Item extends Widget, Labeled {
+}
+
+class MenuItem extends Item {
+	MenuItemStyle menuItemStyle
+	contains Menu menu opposite parentItem
+	int ID
+	int accelerator
+	boolean enabled
+	boolean selection
+}
+
+class ToolBar extends Control {
+	contains ToolItem[*] items opposite parent
+	OrientationStyle orientationStyle
+}
+
+class ToolItem extends Item {
+	refers ToolBar parent opposite items
+	boolean enabled
+	ImageRef hotImage
+	String toolTipText
+	boolean selection
+}
+
+class CoolBar extends AbstractComposite<Control> {
+	contains CoolItem[*] items opposite parent
+	OrientationStyle orientationStyle
+}
+
+class CoolItem extends Item {
+	refers CoolBar parent opposite items
+	refers Control control
+	Point minimumSize
+	Point preferredSize
+	Point size
+}
+
+type ImageRef wraps org.eclipse.emf.common.util.URI
+
+class Label extends Control, Labeled {
+}
+
+class Separator extends Control {
+	OrientationStyle orientationStyle
+}
+
+class Button extends Control, Labeled {
+	ButtonStyle buttonStyle
+	ArrowStyle arrowStyle
+	boolean selection
+}
+
+class Text extends Control {
+	MultiplicityStyle multiplicityStyle
+	String text
+	Point selection
+	boolean editable
+	char echoChar
+	int tabs
+	int textLimit
+	int topIndex
+	String message
+}
+class PasswordText extends Text {
+}
+class SearchText extends Text {
+}
+
+abstract class IntervalControl extends Control {
+	int minimum
+	int maximum
+	int selection
+}
+abstract class IntervalSelector extends IntervalControl {
+	OrientationStyle orientationStyle
+	int increment
+	int pageIncrement
+}
+class Slider extends IntervalSelector {
+	int thumb
+}
+class Spinner extends IntervalSelector {
+	int digits
+	int textLimit
+}
+class ProgressBar extends IntervalControl {
+	ProgressState state
+}
+enum ProgressState {
+	NORMAL = SWT::NORMAL
+	PAUSED = SWT::PAUSED
+	ERROR = SWT::ERROR
+}
+
+class DateTime extends Control {
+	int seconds
+	int minutes
+	int hours
+	int day
+	int month
+	int year
+}
+
+class Browser extends Control {
+	boolean javascriptEnabled
+	String text
+	URI url
+}
+type URI wraps org.eclipse.emf.common.util.URI
+
+abstract class AbstractList extends Control {
+	String[] items
+	int selectionIndex
+}
+
+class List extends AbstractList {
+	MultiplicityStyle multiplicityStyle
+	int[] selectionIndices
+	String[] selection
+}
+
+class Combo extends AbstractList {
+	String text
+	int textLimit
+}
+
+class TabFolder extends Control {
+	contains TabItem[*] items
+}
+
+class TabItem extends Item {
+	contains Control control
+	String toolTipText
+}
+
+//
+
+abstract class Color {
+}
+
+class SystemColor extends Color {
+	SystemColors color
+}
+enum SystemColors {
+	RED = SWT::COLOR_RED
+	GREEN = SWT::COLOR_GREEN
+	BLUE = SWT::COLOR_BLUE
+}
+
+class RGBColor extends Color {
+	int red = "255"
+	int green = "255"
+	int blue = "255"
+}
+
+class Font {
+	String name
+	int style
+	int height
+}
+enum FontStyle {
+	NORMAL = SWT::NORMAL	
+	BOLD = SWT::BOLD	
+	ITALIC = SWT::ITALIC	
+}
+
+//
+
+class FillLayout extends Layout<LayoutData> {
+	OrientationStyle orientationStyle
+ 	int marginWidth = "0"
+ 	int marginHeight = "0"
+	int spacing = "0"
+}
+
+class RowLayout extends Layout<RowData> {
+	OrientationStyle orientationStyle
+	int marginWidth = "0"
+  	int marginHeight = "0"
+  	int spacing = "3"
+  	boolean wrap = "true"
+  	boolean pack = "true"
+  	boolean fill = "false"
+  	boolean center = "true"
+  	boolean justify = "false"
+	int marginLeft = "3"
+	int marginTop = "3"
+	int marginRight = "3"
+	int marginBottom = "3"
+}
+class RowData extends LayoutData {
+	int width = "-1"
+	int height = "-1"
+	boolean exclude = "false"
+}
+
+class GridLayout extends Layout<GridData> {
+	int numColumns = "1"
+	boolean makeColumnsEqualWidth = "false"
+	int marginWidth = "5"
+  	int marginHeight = "5"
+	int marginLeft = "0"
+	int marginTop = "0"
+	int marginRight = "0"
+	int marginBottom = "0"
+ 	int horizontalSpacing = "5"
+ 	int verticalSpacing = "5"
+}
+class GridData extends LayoutData {
+	VerticalAlignmentStyle verticalAlignment // = CENTER;
+	HorizontalAlignmentStyle horizontalAlignment // = LEFT;
+	int widthHint = "-1"
+	int heightHint = "-1"
+	int horizontalIndent = "0"
+	int verticalIndent = "0"
+	int horizontalSpan = "1"
+	int verticalSpan = "1"
+	boolean grabExcessHorizontalSpace = "false"
+	boolean grabExcessVerticalSpace = "false"
+	int minimumWidth = "0"
+	int minimumHeight = "0"
+	boolean exclude = "false"
+}
+
+class FormLayout extends Layout<FormData> {
+	int marginWidth = "0"
+  	int marginHeight = "0"
+  	int spacing = "3"
+	int marginLeft = "3"
+	int marginTop = "3"
+	int marginRight = "3"
+	int marginBottom = "3"
+}
+class FormData extends LayoutData {
+	int width = "0"
+  	int height = "0"
+	contains FormAttachment left
+	contains FormAttachment top
+	contains FormAttachment right
+	contains FormAttachment bottom
+}
+class FormAttachment {
+	FormAttachmentAlignment alignment
+	refers Control control
+	int denominator = "100"
+	int numerator
+	int offset
+}
+enum FormAttachmentAlignment {
+	DEFAULT = SWT::DEFAULT
+	TOP = SWT::TOP
+	BOTTOM = SWT::BOTTOM
+	LEFT = SWT::LEFT
+	RIGHT = SWT::RIGHT
+	CENTER = SWT::CENTER
+}
+
+// styles
+
+enum BorderStyle {
+	NONE = SWT::NONE
+	BORDER = SWT::BORDER
+}
+enum ButtonStyle {
+	TOGGLE = SWT::TOGGLE
+	PUSH = SWT::PUSH
+	RADIO = SWT::RADIO
+	CHECK = SWT::CHECK
+	ARROW = SWT::ARROW
+}
+enum ArrowStyle {
+	NONE = SWT::NONE
+	UP = SWT::UP 
+	DOWN = SWT::DOWN
+	LEFT = SWT::LEFT
+	RIGHT = SWT::RIGHT
+}
+
+enum TextOrientationStyle {
+	LEFT_TO_RIGHT = SWT::LEFT_TO_RIGHT
+	RIGHT_TO_LEFT = SWT::RIGHT_TO_LEFT
+}
+enum OrientationStyle {
+	HORIZONTAL = SWT::HORIZONTAL
+	VERTICAL = SWT::VERTICAL
+}
+
+enum HorizontalAlignmentStyle {
+	LEFT = SWT::LEFT,
+	CENTER = SWT::CENTER,
+	RIGHT = SWT::RIGHT
+	FILL = SWT::FILL
+}
+enum VerticalAlignmentStyle {
+	CENTER = SWT::CENTER
+	TOP = SWT::TOP
+	BOTTOM = SWT::BOTTOM
+	FILL = SWT::FILL
+}
+
+enum MultiplicityStyle {
+	SINGLE = SWT::SINGLE
+	MULTI = SWT::MULTI
+}
+
+enum ComboStyle {
+	DROP_DOWN = SWT::DROP_DOWN
+	READ_ONLY = SWT::READ_ONLY
+	SIMPLE = SWT::SIMPLE
+}
+
+enum MenuStyle {
+	POP_UP = SWT::POP_UP
+	DROP_DOWN = SWT::DROP_DOWN
+}
+
+enum MenuItemStyle {
+	PUSH = SWT::PUSH
+	CASCADE = SWT::CASCADE
+	CHECK = SWT::CHECK
+	RADIO = SWT::RADIO
+	SEPARATOR = SWT::SEPARATOR
+}
+
+enum ModalStyle {
+	SYSTEM_MODAL = SWT::SYSTEM_MODAL
+	APPLICATION_MODAL = SWT::APPLICATION_MODAL
+	PRIMARY_MODAL = SWT::PRIMARY_MODAL
+}
+
+enum TrimStyle {
+	NOT_TRIM = SWT::NO_TRIM
+	SHELL_TRIM = SWT::SHELL_TRIM
+	DIALOG_TRIM = SWT::DIALOG_TRIM
+}
+
+class LineAttributes {
+	float width
+	LineStyle style
+	CapStyle cap
+	JoinStyle join
+	float[*] dash
+	float dashOffset
+	float miterLimit
+}
+
+enum LineStyle {
+	CUSTOM = SWT::LINE_CUSTOM
+	DASH = SWT::LINE_DASH
+	DASHDOT = SWT::LINE_DASHDOT
+	DASHDOTDOT = SWT::LINE_DASHDOTDOT
+	DOT = SWT::LINE_DOT
+	SOLID = SWT::LINE_SOLID
+}
+
+enum CapStyle {
+	FLAT = SWT::CAP_FLAT
+	ROUND = SWT::CAP_ROUND
+	SQUARE = SWT::CAP_SQUARE
+}
+	
+enum JoinStyle {
+	BEVEL = SWT::JOIN_BEVEL
+	MITER = SWT::JOIN_MITER
+	ROUND = SWT::JOIN_ROUND
+}
+	
+//
+
+type Point wraps org.eclipse.swt.graphics.Point
+//	create {
+//		Util::parse(it, "(\\d*)[ ,;](\\d*)", typeof(Integer), 0, typeof(Point));
+//	}
+//	convert {
+//		"" + x + "," + y		
+//	}
+
+class TreeColumn extends Item {
+	String toolTipText
+	String displayText
+}
+
+class Tree extends Control {
+	contains TreeColumn[*] columns
+	boolean headerVisible	
+	boolean linesVisible
+	refers TreeColumn sortColumn
+	SortDirection sortDirection
+	contains TreeViewer viewer
+}
+enum SortDirection {
+	NONE = SWT::NONE
+	UP = SWT::UP
+	DOWN = SWT::DOWN
+}
+
+abstract class Viewer<T extends Control> {
+	refers T control
+	transient ViewerInput input
+}
+type ViewerInput wraps Object
+	
+class TreeViewer extends Viewer<Tree> {
+}

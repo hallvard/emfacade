@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
+
+<!--
+	<resourceServiceProvider
+		class = "org.eclipse.xtext.ui.ecore.ExecutableExtensionFactory:org.eclipse.xtext.ecore.EcoreResourceServiceProviderImpl"
+		uriExtension = "ecore"
+		>
+	</resourceServiceProvider>
+	<resourceServiceProvider
+		class = "org.eclipse.xtext.resource.generic.GenericResourceServiceProvider"
+		uriExtension = "genmodel"
+		>
+	</resourceServiceProvider>
+-->
+
+  </extension>
+
+</plugin>

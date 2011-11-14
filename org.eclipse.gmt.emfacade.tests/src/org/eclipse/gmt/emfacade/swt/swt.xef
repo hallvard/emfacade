@@ -1,0 +1,271 @@
+facade org.eclipse.gmt.emfacade.swt as swtFacade
+
+import org.eclipse.gmt.emfacade.*
+
+import org.eclipse.swt.*
+import org.eclipse.jface.*
+
+strategy builder.strategies.GetSetStrategy1 -> Association
+//	map X<M,ME,V,VE>
+//		method get(M) -> VE V.getX() -> v.getX()
+//		method set(M,ME) -> void V.setX(VE) -> v.setX(ve)
+//	map X<M,ME,V,VE>
+//		method get(M) -> VE V.x -> v.x
+//		method set(M,ME) -> VE V.x -> v.x = ve
+
+//strategy SetStrategy1 -> Association
+strategy builder.strategies.GetStrategy1 -> Association
+strategy builder.strategies.InvalidateStrategy -> Association
+//	map X<M,ME,V,VE>
+//		method get(M) -> VE V.getX() -> v.getX()
+
+strategy builder.strategies.AddRemoveStrategyN -> Association
+//	map X<M,ME,V,VE>
+//		method add(M,ME) -> ? V.addX(VE) -> v.addX(ve)
+//		method remove(M,ME) -> ? V.removeX(VE) -> v.removeX(ve)
+strategy builder.strategies.SizeGetSetAddRemoveStrategyN -> Association
+//	map X<M,ME,V,VE>
+//		method getCount(M) -> int V.getXCount() -> v.getXCount()
+//		method get(M,Integer) -> VE V.getX(int) -> v.getX(intValue)
+//		method set(M,ME,Integer) -> void V.setX(VE,int) -> v.setX(ve,intValue)
+//		method add(M,ME,Integer) -> ? V.addX(VE,int) -> v.addX(ve,intValue)
+//		method remove(M,ME,Integer) -> ? V.removeX(VE,int) -> v.removeX(ve,intValue)
+
+strategy builder.strategies.ListStrategyN -> Association
+
+strategy builder.strategies.ConstructorDisposeStrategy1 -> Association
+strategy builder.strategies.ConstructorDisposeStrategyN -> Association
+
+feature-mapping-defaults
+	strategy GetSetStrategy1
+
+class swt.Layout -> widgets.Layout
+class swt.LayoutData -> Object
+
+class swt.Widget -> widgets.Widget
+	life-cycle
+		method dispose(Widget,Widget) -> if (! widget_2.isDisposed()) widget_2.dispose()
+
+class swt.Color -> graphics.Color
+
+class swt.Control -> widgets.Control
+	map borderStyle using strategy InvalidateStrategy
+	map textOrientationStyle using strategy InvalidateStrategy
+	map layoutData, enabled, visible, touchEnabled, background, font, toolTipText
+	map size
+		method set(Control,Point) -> if (point != null) control.setSize(point)
+
+class swt.AbstractComposite -> widgets.Composite
+	map controls using strategy ConstructorDisposeStrategyN
+
+class swt.Composite -> widgets.Composite
+	life-cycle method create(Composite) -> new widgets.Composite(aParent(composite, typeof(widgets.Composite)), style)
+	map layout
+
+class swt.Group -> widgets.Group
+	life-cycle method create(Group) -> new widgets.Group(aParent(it, typeof(widgets.Composite)), style)
+	map text
+		method set(Group,String) -> group.setText(if (string != null) string else "")
+
+class swt.Canvas -> widgets.Canvas
+	life-cycle method create(Canvas) -> new widgets.Canvas(aParent(it, typeof(widgets.Composite)), style) 
+
+class swt.Decorations -> widgets.Decorations
+	map menuBar
+	map maximized, minimized
+
+class swt.Shell -> widgets.Shell
+	life-cycle method create(Shell) ->
+	val display = widgets::Display::getCurrent()
+		val window = new widgets.Shell(widgets::Display::getCurrent(), style)
+		window.open();
+		while (! window.isDisposed()) {
+			if (! display.readAndDispatch()) display.sleep();
+		}
+		shell
+	map modalStyle using strategy InvalidateStrategy
+	map trimStyle using strategy InvalidateStrategy
+	map fullScreen, alpha
+	
+class swt.AbstractMenu -> widgets.Menu
+	map textOrientationStyle using strategy InvalidateStrategy
+	map items using strategy ConstructorDisposeStrategyN
+	map enabled, visible
+
+class swt.Menu -> widgets.Menu
+	life-cycle method create(Menu) -> new widgets.Menu(aParent(it, typeof(widgets.Decorations)), style)
+class swt.MenuBar -> widgets.Menu
+	life-cycle method create(MenuBar) -> new widgets.Menu(aParent(it, typeof(widgets.Decorations)), style)
+
+class swt.Item -> widgets.Item
+	map text
+		method set(Item,String) -> item.setText(if (string != null) string else "")
+
+class swt.MenuItem -> widgets.MenuItem
+	life-cycle method create(MenuItem) -> new widgets.MenuItem(aParent(it, typeof(widgets.Menu)), style)
+	map ID, accelerator, enabled, selection
+	map menu
+
+class swt.Label -> widgets.Label
+	life-cycle method create(Label) -> new widgets.Label(aParent(it, typeof(widgets.Composite)), style)
+	map text
+		method set(Label,String) -> label.setText(if (string != null) string else "")
+
+class swt.Separator -> widgets.Label
+	life-cycle method create(Separator) -> new widgets.Label(aParent(it, typeof(widgets.Composite)), style)
+	map orientationStyle using strategy InvalidateStrategy
+
+class swt.Button -> widgets.Button
+	life-cycle
+		method create(Button) -> new widgets.Button(aParent(it, typeof(widgets.Composite)), style)
+		method configure(Button,Button) -> button_2.addSelectionListener(this as events.SelectionListener)
+	map buttonStyle using strategy InvalidateStrategy
+	map arrowStyle using strategy InvalidateStrategy
+	map text
+		method set(Button,String) -> button.setText(if (string != null) string else "")
+	map selection
+	handle events.SelectionListener
+		method widgetSelected(SelectionEvent) ->
+			val swtButton = selectionEvent.widget as widgets.Button
+			val button = e(selectionEvent.widget, typeof(swt.Button))
+			button.selection = swtButton.selection 
+
+class swt.Text -> widgets.Text
+	life-cycle method create(Text) -> new widgets.Text(aParent(it, typeof(widgets.Composite)), style)
+	map multiplicityStyle using strategy InvalidateStrategy
+	map text
+		method set(Text,String) -> text.setText(if (string != null) string else "")
+	map selection
+		method set(Text,Point) -> if (point != null) text.setSelection(point.x, point.y)
+	map editable, echoChar, tabs, topIndex
+	map message
+		method set(Text,String) -> text.setMessage(if (string != null) string else "")
+	map textLimit
+		method set(Text,Integer) -> text.setTextLimit(if (integer > 0) integer else widgets::Text::LIMIT)
+
+class swt.Slider -> widgets.Slider
+	life-cycle method create(Slider) -> new widgets.Slider(aParent(it, typeof(widgets.Composite)), style)
+	map minimum, maximum, selection, orientationStyle, increment, pageIncrement, thumb
+
+class swt.Spinner -> widgets.Spinner
+	life-cycle method create(Spinner) -> new widgets.Spinner(aParent(it, typeof(widgets.Composite)), style)
+	map minimum, maximum, selection, orientationStyle, increment, pageIncrement, digits, textLimit
+
+class swt.ProgressBar -> widgets.ProgressBar
+	life-cycle method create(ProgressBar) -> new widgets.ProgressBar(aParent(it, typeof(widgets.Composite)), style)
+	map minimum, maximum, selection, state
+
+class swt.DateTime -> widgets.DateTime
+	life-cycle method create(DateTime) -> new widgets.DateTime(aParent(it, typeof(widgets.Composite)), style)
+	map seconds, minutes, hours, day, month, year
+	
+class swt.Browser -> browser.Browser
+	life-cycle method create(Browser) -> new browser.Browser(aParent(it, typeof(widgets.Composite)), style)
+	map javascriptEnabled, text
+	map url -> String
+type swt.URI -> String -> model.toString()
+
+class swt.AbstractList -> widgets.Control
+
+class swt.List -> widgets.List
+	life-cycle method create(List) -> new widgets.List(aParent(it, typeof(widgets.Composite)), style)
+	map multiplicityStyle using strategy InvalidateStrategy
+	map items using strategy SizeGetSetAddRemoveStrategyN
+		method getCount(List) -> list.itemCount
+		method add(List,int,String) -> list.add(string, intValue)
+		method remove(List,int) -> list.remove(intValue)
+	map selectionIndex
+		method set(List,Integer) -> list.selection = integer
+	map selectionIndices using strategy AddRemoveStrategyN
+		method add(List,Integer) -> list.select(integer)
+		method remove(List,Integer) -> list.deselect(integer)		
+
+class swt.Combo -> widgets.Combo
+	life-cycle method create(Combo) -> new widgets.Combo(aParent(it, typeof(widgets.Composite)), style)
+	map items using strategy SizeGetSetAddRemoveStrategyN
+		method getCount(Combo) -> combo.itemCount
+		method add(Combo,int,String) -> combo.add(string, intValue)
+		method remove(Combo,int) -> combo.remove(intValue)
+	map selectionIndex
+		method set(Combo,Integer) -> combo.select(integer)
+	map text
+		method set(Combo,String) -> combo.setText(if (string != null) string else "")
+	map textLimit
+		method set(Combo,Integer) -> combo.setTextLimit(if (integer > 0) integer else widgets::Text::LIMIT)
+
+class swt.TabFolder -> widgets.TabFolder
+	life-cycle method create(TabFolder) -> new widgets.TabFolder(aParent(it, typeof(widgets.Composite)), style)
+	map items using strategy ConstructorDisposeStrategyN
+
+class swt.TabItem -> widgets.TabItem
+	life-cycle method create(TabItem) -> new widgets.TabItem(aParent(it, typeof(widgets.TabFolder)), style)
+	map toolTipText
+	map control
+
+// layouts
+
+class swt.FillLayout -> layout.FillLayout
+	feature-mapping-defaults strategy GetSetStrategy1
+	map orientationStyle, marginWidth, marginHeight
+
+class swt.RowLayout -> layout.RowLayout
+	feature-mapping-defaults strategy GetSetStrategy1
+	map orientationStyle, spacing, wrap, pack, fill, center, justify
+	map marginWidth, marginHeight, marginLeft, marginTop, marginRight, marginBottom
+
+class swt.RowData -> layout.RowData
+	feature-mapping-defaults strategy GetSetStrategy1
+	map width, height, exclude
+		
+class swt.GridLayout -> layout.GridLayout
+	feature-mapping-defaults strategy GetSetStrategy1
+	map numColumns, makeColumnsEqualWidth, horizontalSpacing, verticalSpacing
+	map marginWidth, marginHeight, marginLeft, marginTop, marginRight, marginBottom
+
+class swt.GridData -> layout.GridData
+	feature-mapping-defaults strategy GetSetStrategy1
+	map verticalAlignment, horizontalAlignment, widthHint, heightHint, horizontalIndent, verticalIndent, horizontalSpan, verticalSpan
+	map grabExcessHorizontalSpace, grabExcessVerticalSpace, minimumWidth, minimumHeight, exclude
+
+class swt.FormLayout -> layout.FormLayout
+	feature-mapping-defaults strategy GetSetStrategy1
+	map marginWidth, marginHeight, spacing, marginLeft, marginTop, marginRight, marginBottom
+
+class swt.FormData -> layout.FormData
+	feature-mapping-defaults strategy GetSetStrategy1
+	map width, height, left, top, right, bottom
+
+class swt.FormAttachment -> layout.FormAttachment
+	feature-mapping-defaults strategy GetSetStrategy1
+	map alignment, control, denominator, numerator, offset
+
+class swt.SystemColor -> graphics.Color
+	life-cycle method create(SystemColor) -> aParent(it, typeof(widgets.Widget)).display.getSystemColor(color.value)
+	map color using strategy InvalidateStrategy
+
+class swt.RGBColor -> graphics.Color
+	feature-mapping-defaults strategy GetStrategy1
+	life-cycle method create(RGBColor) ->
+		new graphics.Color(aParent(it, typeof(widgets.Widget)).display, red, green, blue)
+	map red, green, blue
+
+class swt.Font -> graphics.Font
+	feature-mapping-defaults strategy GetStrategy1
+	life-cycle method create(Font) ->
+		new graphics.Font(aParent(it, typeof(widgets.Widget)).display, name, style, height as int)
+	map name, style, height 
+
+class swt.TreeColumn -> widgets.TreeColumn
+	life-cycle method create(TreeColumn) -> new widgets.TreeColumn(aParent(it, typeof(widgets.Tree)), style)
+	map toolTipText, displayText
+
+class swt.Tree -> widgets.Tree
+	life-cycle method create(Tree) -> new widgets.Tree(aParent(it, typeof(widgets.Composite)), style)
+	map columns using strategy ConstructorDisposeStrategyN
+	map headerVisible, linesVisible, sortColumn, sortDirection
+//	map viewer using strategy ConstructorDisposeStrategy1
+
+class swt.Viewer -> viewers.Viewer
+
+class swt.TreeViewer -> viewers.TreeViewer
+	life-cycle method create(TreeViewer) -> new viewers.TreeViewer(aParent(it, typeof(widgets.Tree)))

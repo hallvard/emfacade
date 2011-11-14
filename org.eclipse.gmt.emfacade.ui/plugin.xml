@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+  <extension point="org.eclipse.ui.commands">
+      <command
+            id="org.eclipse.gmt.emfacade.ui.GenerateFeaturesAndMappingsCommand"
+            name="Generate Features and Mappings from Class Members">
+            <commandParameter
+                  id="org.eclipse.gmt.emfacade.ui.GenerateFeaturesAndMappingsCommand.eClassNamePrefix"
+                  name="eClassNamePrefix"
+                  optional="true">
+            </commandParameter>
+      </command>
+   </extension>
+   
+   <extension point="org.eclipse.ui.handlers">
+      <handler
+            class="org.eclipse.gmt.emfacade.ui.commands.GenerateFeaturesAndMappingsCommandHandler"
+            commandId="org.eclipse.gmt.emfacade.ui.GenerateFeaturesAndMappingsCommand">
+      </handler>
+   </extension>
+
+	<extension point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command commandId="org.eclipse.gmt.emfacade.ui.GenerateFeaturesAndMappingsCommand">
+         	<parameter
+                name="org.eclipse.gmt.emfacade.ui.GenerateFeaturesAndMappingsCommand.eClassNamePrefix"
+                value="M">
+         	</parameter>
+            <visibleWhen>
+				<with variable="activeMenuSelection">
+					<count value="(1-"/>
+					<iterate>
+						<instanceof value="org.eclipse.emf.ecore.EObject"/>
+					</iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="no.hal.emf.ui.parts.SashEditor"
+          contributorClass="org.eclipse.emf.ecore.presentation.EcoreActionBarContributor"
+          default="false"
+          extensions="xmi"
+          id="org.eclipse.gmt.emfacade.ui.editor.SashEditor"
+          name="Emfacade Editor">
+    </editor>
+ </extension>
+
+ <extension
+       point="org.eclipse.ui.views">
+      <view id="org.eclipse.gmt.emfacade.ui.views.SwtEmfacadeView"
+            name="Swt Emfacade View"
+            class="org.eclipse.gmt.emfacade.ui.views.SwtEmfacadeView"
+            >
+      </view>
+ </extension>
+
+</plugin>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<swt:Composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swt="org.eclipse.gmt.emfacade.swt">
+  <controls xsi:type="swt:Composite">
+    <controls xsi:type="swt:Label" text="A label"/>
+    <controls xsi:type="swt:Button" text="A toggle button"/>
+    <controls xsi:type="swt:Button" text="A check button" buttonStyle="CHECK" selection="true"/>
+    <controls xsi:type="swt:Button" text="A radio button" buttonStyle="RADIO"/>
+    <controls xsi:type="swt:Text" borderStyle="BORDER" text="A text field"/>
+    <layout xsi:type="swt:FillLayout" orientationStyle="VERTICAL"/>
+  </controls>
+  <controls xsi:type="swt:Composite">
+    <controls xsi:type="swt:Combo">
+      <items>First</items>
+      <items>Third</items>
+    </controls>
+    <controls xsi:type="swt:List">
+      <items>First</items>
+      <items>Second</items>
+      <items>Third</items>
+      <items>Fourth</items>
+      <items>Fifth</items>
+    </controls>
+    <layout xsi:type="swt:FillLayout" orientationStyle="VERTICAL"/>
+  </controls>
+  <controls xsi:type="swt:Group" text="Hallvard Tr&#xe6;tteberg"/>
+  <layout xsi:type="swt:FillLayout"/>
+</swt:Composite>

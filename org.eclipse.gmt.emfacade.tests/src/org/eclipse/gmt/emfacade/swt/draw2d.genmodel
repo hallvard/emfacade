@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gmt.emfacade.tests/src-gen"
+    modelName="Draw2d" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.7" usedGenPackages="swt.genmodel#//swt platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true">
+  <genPackages prefix="Draw2d" basePackage="org.eclipse.gmt.emfacade" disposableProviderFactory="true"
+      ecorePackage="draw2d.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="draw2d.ecore#//Alignment">
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Alignment/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Alignment/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Alignment/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Alignment/TOP"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Alignment/MIDDLE"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Alignment/BOTTOM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="draw2d.ecore#//Orientation">
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Orientation/HORIZONTAL"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Orientation/VERTICAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="draw2d.ecore#//Direction">
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Direction/NORTH"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Direction/SOUTH"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Direction/EAST"/>
+      <genEnumLiterals ecoreEnumLiteral="draw2d.ecore#//Direction/WEST"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="draw2d.ecore#//Point"/>
+    <genDataTypes ecoreDataType="draw2d.ecore#//Dimension"/>
+    <genDataTypes ecoreDataType="draw2d.ecore#//Rectangle"/>
+    <genClasses ecoreClass="draw2d.ecore#//Draw2DCanvas">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Draw2DCanvas/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//Figure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/opaque"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/focusTraversable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/bounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/minimumSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/preferredSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Figure/maximumSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/toolTip"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/backgroundColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/foregroundColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/font"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//Figure/border"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Label/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Label/textAlignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Label/textPlacement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Label/icon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Label/iconAlignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Label/iconTextGap"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="draw2d.ecore#//Shape">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/fillXOR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/outline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/outlineXOR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/alpha"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/antialias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineWidthFloat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineCap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineJoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineDash"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineDashOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Shape/lineMiterLimit"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//RectangleFigure"/>
+    <genClasses ecoreClass="draw2d.ecore#//RoundedRectangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//RoundedRectangle/cornerDimensions"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//Ellipse"/>
+    <genClasses ecoreClass="draw2d.ecore#//Triangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Triangle/orientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Triangle/direction"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="draw2d.ecore#//PointListShape">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//PointListShape/pointList"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//Polyline">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Polyline/tolerance"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//Polygon"/>
+    <genClasses ecoreClass="draw2d.ecore#//PolylineShape">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//PolylineShape/tolerance"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//PolygonShape"/>
+    <genClasses ecoreClass="draw2d.ecore#//ImageFigure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//ImageFigure/image"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="draw2d.ecore#//ConnectionAnchor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference draw2d.ecore#//ConnectionAnchor/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//XYAnchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//XYAnchor/location"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//BlockFlow"/>
+    <genClasses image="false" ecoreClass="draw2d.ecore#//Border">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//Border/opaque"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="draw2d.ecore#//LabeledBorder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//LabeledBorder/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//LabeledBorder/font"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//FrameBorder"/>
+    <genClasses image="false" ecoreClass="draw2d.ecore#//ColoredLabeledBorder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference draw2d.ecore#//ColoredLabeledBorder/textColor"/>
+    </genClasses>
+    <genClasses ecoreClass="draw2d.ecore#//GroupBoxBorder"/>
+    <genClasses ecoreClass="draw2d.ecore#//TitleBarBorder"/>
+    <genClasses ecoreClass="draw2d.ecore#//FlowBorder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//FlowBorder/leftMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//FlowBorder/rightMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//FlowBorder/topMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute draw2d.ecore#//FlowBorder/bottomMargin"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,164 @@
+package org.eclipse.gmt.emfacade.draw2d
+
+import org.eclipse.draw2d.*
+import org.eclipse.draw2d.geometry.*
+import org.eclipse.draw2d.text.*
+
+import org.eclipse.gmt.emfacade.swt
+
+class Draw2DCanvas extends Canvas {
+	contains Figure contents
+}
+
+class Figure {
+	boolean enabled
+	boolean visible
+	boolean opaque
+	boolean focusTraversable
+	contains Figure[*] children opposite parent
+	refers Figure parent opposite children
+	Rectangle bounds
+	Dimension minimumSize
+	Dimension preferredSize
+	Dimension maximumSize
+	contains Figure toolTip
+	contains Color backgroundColor
+	contains Color foregroundColor
+	contains Font font
+	contains Border border
+}
+
+class Label extends Figure {
+	String text
+	Alignment textAlignment
+	Direction textPlacement
+	ImageRef icon
+	Alignment iconAlignment
+	int iconTextGap
+}
+
+abstract class Shape extends Figure {
+	boolean fill
+	boolean fillXOR
+	boolean outline
+	boolean outlineXOR
+	Integer alpha
+	Integer antialias
+	float lineWidthFloat
+	LineStyle lineStyle
+	CapStyle lineCap
+	JoinStyle lineJoin
+	float[*] lineDash
+	float lineDashOffset
+	int lineMiterLimit
+}
+
+class RectangleFigure extends Shape {
+}
+class RoundedRectangle extends Shape {
+	Dimension cornerDimensions
+}
+class Ellipse extends Shape {
+}
+class Triangle extends Shape {
+	Orientation orientation // can only be set
+	Direction direction // can only be set
+}
+
+abstract class PointListShape extends Shape {
+	int[] pointList
+}
+class Polyline extends PointListShape {
+	int tolerance = "2"// can only be set
+}
+class Polygon extends Polyline {
+}
+
+class PolylineShape extends PointListShape {
+	int tolerance = "2" // can only be set
+}
+class PolygonShape extends PointListShape {
+}
+
+class ImageFigure extends Figure {
+	ImageRef image
+}
+
+// anchors
+
+abstract class ConnectionAnchor {
+	refers Figure owner
+}
+
+class XYAnchor extends ConnectionAnchor {
+	Point location 
+}
+
+// text figures
+
+abstract class FlowFigure extends Figure {
+}
+
+class BlockFlow extends FlowFigure {
+	Orientation orientation
+	HorizontalAlignment horizontalAlignment
+}
+
+// Borders
+
+abstract class Border {
+	boolean opaque
+}
+
+abstract class LabeledBorder extends Border {
+	String label
+	contains Font font
+}
+
+class FrameBorder extends LabeledBorder {
+}
+
+abstract class ColoredLabeledBorder extends LabeledBorder {
+	contains Color textColor
+}
+
+class GroupBoxBorder extends ColoredLabeledBorder {
+}
+class TitleBarBorder extends ColoredLabeledBorder {
+}
+
+type Point wraps Point
+type Dimension wraps Dimension
+type Rectangle wraps Rectangle
+
+//
+
+enum Alignment {
+	LEFT = PositionConstants::LEFT
+	CENTER = PositionConstants::CENTER
+	RIGHT = PositionConstants::RIGHT
+	TOP = PositionConstants::TOP
+	MIDDLE = PositionConstants::MIDDLE
+	BOTTOM = PositionConstants::BOTTOM
+}
+
+enum HorizontalAlignment {
+	NONE = PositionConstants::NONE
+	LEFT = PositionConstants::LEFT
+	CENTER = PositionConstants::CENTER
+	RIGHT = PositionConstants::RIGHT
+	ALWAYS_LEFT = PositionConstants::ALWAYS_LEFT
+	ALWAYS_RIGHT = PositionConstants::ALWAYS_RIGHT
+}
+
+enum Orientation {
+	HORIZONTAL = PositionConstants::HORIZONTAL
+	VERTICAL = PositionConstants::VERTICAL
+}
+
+enum Direction {
+	NORTH = PositionConstants::NORTH
+	SOUTH = PositionConstants::SOUTH
+	EAST = PositionConstants::EAST
+	WEST = PositionConstants::WEST
+}

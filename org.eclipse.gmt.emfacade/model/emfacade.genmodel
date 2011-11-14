@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gmt.emfacade/src"
+    modelPluginID="org.eclipse.gmt.emfacade" modelName="Emfacade" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>emfacade.ecore</foreignModel>
+  <genPackages prefix="Emfacade" basePackage="org.eclipse.gmt" disposableProviderFactory="true"
+      ecorePackage="emfacade.ecore#/">
+    <genClasses ecoreClass="emfacade.ecore#//FacadeModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/genModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/usesFacadeModels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/featureMappingStrategies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//FacadeModel/basePackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/ePackages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/classifierMappings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/featureMappingDefaults"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//ImportDirective">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//ImportDirective/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EClassifierMapping">
+      <genOperations ecoreOperation="emfacade.ecore#//EClassifierMapping/getEClassifier"/>
+      <genOperations ecoreOperation="emfacade.ecore#//EClassifierMapping/getDeclaredType"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EClassMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/eClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/jClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/createExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/disposeExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/featureMappings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/featureMappingDefaults"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="emfacade.ecore#//FeatureMappingStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategy/implType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategy/interfaceType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategy/patterns"/>
+      <genOperations ecoreOperation="emfacade.ecore#//FeatureMappingStrategy/createFeatureMappings">
+        <genParameters ecoreParameter="emfacade.ecore#//FeatureMappingStrategy/createFeatureMappings/jElements"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EFeatureMapping">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/eClassMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/options"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/eFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/jClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/inferredStrategyAssociationType"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EFeatureMappingOptions">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMappingOptions/strategy"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EFeatureMappingElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMappingElement/strategyMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMappingElement/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EDataTypeMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EDataTypeMapping/eDataType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EDataTypeMapping/jClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EDataTypeMapping/convertExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EEnumMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EEnumMapping/literalMappings"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EEnumLiteralMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EEnumLiteralMapping/enumLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EEnumLiteralMapping/convertExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//NameTypePatternFMS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//NameTypePatternFMS/pattern"/>
+      <genOperations ecoreOperation="emfacade.ecore#//NameTypePatternFMS/createFeature">
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePatternFMS/createFeature/propertyName"/>
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePatternFMS/createFeature/type"/>
+      </genOperations>
+      <genOperations ecoreOperation="emfacade.ecore#//NameTypePatternFMS/createFeatureMapping">
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePatternFMS/createFeatureMapping/feature"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//MemberPattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//MemberPattern/namePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//MemberPattern/typePattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//MemberPattern/parameterListPattern"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//NameTypePattern">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//NameTypePattern/memberPatterns"/>
+      <genOperations ecoreOperation="emfacade.ecore#//NameTypePattern/matchMembers">
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePattern/matchMembers/propertyName"/>
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePattern/matchMembers/members"/>
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePattern/matchMembers/matchedMembers"/>
+      </genOperations>
+      <genOperations ecoreOperation="emfacade.ecore#//NameTypePattern/findFeatures">
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePattern/findFeatures/members"/>
+        <genParameters ecoreParameter="emfacade.ecore#//NameTypePattern/findFeatures/matchedTypes"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//TypeListPattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//TypeListPattern/parameterTypePatterns"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//FeatureMappingStrategyPattern">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategyPattern/strategy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//FeatureMappingStrategyPattern/featureName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategyPattern/typeParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategyPattern/methodPatterns"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//FeatureMappingStrategyMethodPattern">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategyMethodPattern/strategyMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategyMethodPattern/targetMember"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FeatureMappingStrategyMethodPattern/targetBody"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Types" ecorePackage="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmVisibility">
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmVisibility/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmVisibility/PRIVATE"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmVisibility/PROTECTED"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmVisibility/PUBLIC"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//Iterable">
+      <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//Iterable/E"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//ITypeReferenceVisitor">
+      <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//ITypeReferenceVisitor/Result"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//ITypeReferenceVisitorWithParameter">
+      <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//ITypeReferenceVisitorWithParameter/Parameter"/>
+      <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//ITypeReferenceVisitorWithParameter/Result"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//Exception"/>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIdentifiableElement">
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIdentifiableElement/getIdentifier"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIdentifiableElement/getSimpleName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIdentifiableElement/getQualifiedName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIdentifiableElement/getQualifiedName.1">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIdentifiableElement/getQualifiedName.1/innerClassDelimiter"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmType"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmVoid"/>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmComponentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmComponentType/arrayType"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmPrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmPrimitiveType/simpleName"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmArrayType">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmArrayType/componentType"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmArrayType/getDimensions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/superTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/static"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/final"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/packageName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/getDeclaredOperations"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/getDeclaredFields"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/findAllFeaturesByName">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/findAllFeaturesByName/simpleName"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType/getAllFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeParameter/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeParameter/declarator"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeParameterDeclarator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeParameterDeclarator/typeParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmConstraintOwner">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmConstraintOwner/constraints"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/typeReference"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/owner"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/getIdentifier"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/getSimpleName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/getQualifiedName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/getQualifiedName.1">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeConstraint/getQualifiedName.1/innerClassDelimiter"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmUpperBound"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmLowerBound"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationType"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmEnumerationType">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmEnumerationType/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmEnumerationLiteral">
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmEnumerationLiteral/getEnumType"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericType/interface"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericType/getExtendedInterfaces"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericType/getExtendedClass"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericType/isInstantiateable"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericType/getDeclaredConstructors"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference">
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/getType"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/getIdentifier"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/getSimpleName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/getQualifiedName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/getQualifiedName.1">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/getQualifiedName.1/innerClassDelimiter"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept/visitor"/>
+        <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept/Result"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept.1">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept.1/visitor"/>
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept.1/parameter"/>
+        <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept.1/Parameter"/>
+        <genTypeParameters ecoreTypeParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference/accept.1/Result"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmParameterizedTypeReference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmParameterizedTypeReference/arguments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmParameterizedTypeReference/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericArrayTypeReference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericArrayTypeReference/componentType"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericArrayTypeReference/getDimensions"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmGenericArrayTypeReference/getType"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmWildcardTypeReference"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnyTypeReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnyTypeReference/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMultiTypeReference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCompoundTypeReference/references"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCompoundTypeReference/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember/declaringType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember/simpleName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember/identifier"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember/internalSetIdentifier">
+        <genParameters ecoreParameter="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmMember/internalSetIdentifier/identifier"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmFeature"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmField/static"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmField/final"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmField/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmExecutable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmExecutable/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmExecutable/exceptions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmExecutable/varArgs"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmConstructor"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation/static"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation/final"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation/abstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation/returnType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation/defaultValue"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmFormalParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmFormalParameter/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmFormalParameter/parameterType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationTarget">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationTarget/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationReference/annotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationReference/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationReference/values"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationValue/operation"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationValue/getValueName"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIntAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmIntAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmBooleanAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmBooleanAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmByteAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmByteAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmShortAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmShortAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmLongAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmLongAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDoubleAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDoubleAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmFloatAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmFloatAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCharAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCharAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmStringAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmStringAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeAnnotationValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationAnnotationValue">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmEnumAnnotationValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmEnumAnnotationValue/values"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDelegateTypeReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDelegateTypeReference/delegate"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmSpecializedTypeReference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmSpecializedTypeReference/equivalent"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmSynonymTypeReference"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmUnknownTypeReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmUnknownTypeReference/exception"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCompoundTypeReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCompoundTypeReference/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCompoundTypeReference/references"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCustomAnnotationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmCustomAnnotationValue/values"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Xbase" ecorePackage="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#/">
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XExpression"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XIfExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XIfExpression/if"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XIfExpression/then"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XIfExpression/else"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XSwitchExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XSwitchExpression/switch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XSwitchExpression/cases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XSwitchExpression/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XSwitchExpression/localVarName"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCasePart">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCasePart/case"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCasePart/then"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCasePart/typeGuard"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBlockExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBlockExpression/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XVariableDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XVariableDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XVariableDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XVariableDeclaration/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XVariableDeclaration/writeable"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/typeArguments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/implicitReceiver"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/invalidFeatureIssueCode"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/validFeature"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/getConcreteSyntaxFeatureName"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/getExplicitArguments"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractFeatureCall/isExplicitOperationCallOrBuilderSyntax"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XMemberFeatureCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XMemberFeatureCall/memberCallTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XMemberFeatureCall/memberCallArguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XMemberFeatureCall/explicitOperationCall"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XMemberFeatureCall/spreading"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XMemberFeatureCall/nullSafe"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XFeatureCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XFeatureCall/featureCallArguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XFeatureCall/explicitOperationCall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XFeatureCall/declaringType"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XConstructorCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XConstructorCall/constructor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XConstructorCall/arguments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XConstructorCall/typeArguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XConstructorCall/invalidFeatureIssueCode"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XConstructorCall/validFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBooleanLiteral/isTrue"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XNullLiteral"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XIntLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XIntLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XStringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XStringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XClosure">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XClosure/declaredFormalParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XClosure/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XClosure/explicitSyntax"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XClosure/implicitParameter"/>
+      <genOperations ecoreOperation="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XClosure/getFormalParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCastedExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCastedExpression/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCastedExpression/target"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBinaryOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBinaryOperation/leftOperand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XBinaryOperation/rightOperand"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XUnaryOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XUnaryOperation/operand"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XForLoopExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XForLoopExpression/forExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XForLoopExpression/eachExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XForLoopExpression/declaredParam"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractWhileExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractWhileExpression/predicate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAbstractWhileExpression/body"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XDoWhileExpression"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XWhileExpression"/>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XTypeLiteral">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XTypeLiteral/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XInstanceOfExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XInstanceOfExpression/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XInstanceOfExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XThrowExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XThrowExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XTryCatchFinallyExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XTryCatchFinallyExpression/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XTryCatchFinallyExpression/finallyExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XTryCatchFinallyExpression/catchClauses"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCatchClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCatchClause/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XCatchClause/declaredParam"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAssignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAssignment/assignable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XAssignment/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XReturnExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/org.eclipse.xtext.xbase/model/Xbase.ecore#//XReturnExpression/expression"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="GenModel" ecorePackage="http://www.eclipse.org/emf/2002/GenModel#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenProviderKind">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenProviderKind/Singleton"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenProviderKind/Stateful"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenProviderKind/None"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenPropertyKind">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenPropertyKind/Editable"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenPropertyKind/Readonly"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenPropertyKind/None"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenResourceKind">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenResourceKind/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenResourceKind/Basic"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenResourceKind/XMI"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenResourceKind/XML"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenDelegationKind">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenDelegationKind/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenDelegationKind/Reflective"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenDelegationKind/Virtual"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenDelegationKind/Dynamic"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenJDKLevel">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenJDKLevel/JDK14"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenJDKLevel/JDK50"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenJDKLevel/JDK60"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion/EMF22"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion/EMF23"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion/EMF24"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion/EMF25"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion/EMF26"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimeVersion/EMF27"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimePlatform">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimePlatform/IDE"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimePlatform/RCP"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimePlatform/RAP"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/emf/2002/GenModel#//GenRuntimePlatform/GWT"/>
+    </genEnums>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/copyrightText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/modelDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/creationCommands"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/creationIcons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/creationSubmenus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editorDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/modelPluginID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/templateDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/runtimeJar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/foreignModel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/dynamicTemplates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/redirection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/forceOverwrite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/nonExternalizedStringTag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/modelName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/modelPluginClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editPluginClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editorPluginClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/updateClasspath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/generateSchema"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/nonNLSMarkers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/staticPackages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/modelPluginVariables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/rootExtendsInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/rootExtendsClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/rootImplementsInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressEMFTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressEMFMetaData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressEMFModelTags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressInterfaces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/featureMapWrapperInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/featureMapWrapperInternalInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/featureMapWrapperClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/runtimeCompatibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/richClientPlatform"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/reflectiveDelegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/codeFormatting"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/testsDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/testSuiteClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/booleanFlagsField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/booleanFlagsReservedBits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/importerID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/bundleManifest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/featureDelegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/containmentProxies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/minimalReflectiveMethods"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressContainment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressNotification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/arrayAccessors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressUnsettable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/facadeHelperClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/complianceLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/suppressGenModelAnnotations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/copyrightFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/binaryCompatibleReflectiveMethods"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/publicConstructors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/templatePluginVariables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/providerRootExtendsClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editPluginID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editPluginVariables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editorPluginID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/editorPluginVariables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/testsPluginID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/testsPluginVariables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/optimizedHasChildren"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/tableProviders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/colorProviders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/fontProviders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/runtimeVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/packedEnums"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenModel/genPackages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenModel/usedGenPackages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/interfaceNamePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/classNamePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/operationReflection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/richAjaxPlatform"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenModel/runtimePlatform"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/basePackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/disposableProviderFactory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/adapterFactory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/loadInitialization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/interfacePackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/metaDataPackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/classPackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/utilityPackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/providerPackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/presentationPackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/testsPackageSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/generateExampleClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/literalsInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/dataTypeConverters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/multipleEditorPages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/generateModelWizard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/extensibleProviderFactory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/childCreationExtenders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/contentTypeIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenPackage/fileExtensions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/ecorePackage"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/genModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/genEnums"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/genDataTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/genClasses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/nestedGenPackages"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenPackage/genClassifiers"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenClass/provider"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenClass/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenClass/dynamic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenClass/ecoreClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenClass/genFeatures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenClass/genOperations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenClass/labelFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/notify"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/children"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/createChild"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/propertyCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/propertyFilterFlags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/propertyDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/propertyMultiLine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenFeature/propertySortChoices"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenFeature/genClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenFeature/ecoreFeature"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenBase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenBase/genAnnotations"/>
+      <genOperations ecoreOperation="http://www.eclipse.org/emf/2002/GenModel#//GenBase/getGenAnnotation">
+        <genParameters ecoreParameter="http://www.eclipse.org/emf/2002/GenModel#//GenBase/getGenAnnotation/source"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenEnum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenEnum/typeSafeEnumCompatible"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenEnum/ecoreEnum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenEnum/genEnumLiterals"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenEnumLiteral">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenEnumLiteral/genEnum"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenEnumLiteral/ecoreEnumLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenClassifier">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenClassifier/genPackage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenClassifier/genTypeParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenDataType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenDataType/ecoreDataType"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenOperation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenOperation/genClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenOperation/ecoreOperation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenOperation/genParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenOperation/genTypeParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenParameter">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenParameter/genOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenParameter/ecoreParameter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenTypedElement"/>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/emf/2002/GenModel#//GenAnnotation/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenAnnotation/details"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenAnnotation/genBase"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenAnnotation/references"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenAnnotation/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/emf/2002/GenModel#//GenTypeParameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/emf/2002/GenModel#//GenTypeParameter/ecoreTypeParameter"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

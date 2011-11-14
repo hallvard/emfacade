@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMF Facade UI
+Bundle-SymbolicName: org.eclipse.gmt.emfacade.ui;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-Activator: org.eclipse.gmt.emfacade.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.emf.ecore;bundle-version="2.6.1",
+ org.eclipse.emf.edit;bundle-version="2.6.0",
+ org.eclipse.ui.views;bundle-version="3.5.0",
+ org.eclipse.emf.edit.ui;bundle-version="2.6.0",
+ org.eclipse.gmt.emfacade;bundle-version="0.1.10",
+ no.hal.emf.ui.utils;bundle-version="0.1.1",
+ org.eclipse.emf.ecore.editor;bundle-version="2.6.0",
+ org.eclipse.xtext.common.types;bundle-version="2.1.0",
+ org.eclipse.gmt.swt.app;bundle-version="1.0.0",
+ org.eclipse.gmt.emfacade.tests;bundle-version="0.1.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

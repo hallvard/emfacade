@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gmt.emfacade.tests/src-gen"
+    modelName="Swt" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.7" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true">
+  <genPackages prefix="Swt" basePackage="org.eclipse.gmt.emfacade" disposableProviderFactory="true"
+      ecorePackage="swt.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//ProgressState">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ProgressState/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ProgressState/PAUSED"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ProgressState/ERROR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//SystemColors">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//SystemColors/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//SystemColors/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//SystemColors/BLUE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//FontStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FontStyle/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FontStyle/BOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FontStyle/ITALIC"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//FormAttachmentAlignment">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FormAttachmentAlignment/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FormAttachmentAlignment/TOP"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FormAttachmentAlignment/BOTTOM"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FormAttachmentAlignment/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FormAttachmentAlignment/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//FormAttachmentAlignment/CENTER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//BorderStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//BorderStyle/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//BorderStyle/BORDER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//ButtonStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ButtonStyle/TOGGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ButtonStyle/PUSH"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ButtonStyle/RADIO"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ButtonStyle/CHECK"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ButtonStyle/ARROW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//ArrowStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ArrowStyle/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ArrowStyle/UP"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ArrowStyle/DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ArrowStyle/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ArrowStyle/RIGHT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//TextOrientationStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//TextOrientationStyle/LEFT_TO_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//TextOrientationStyle/RIGHT_TO_LEFT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//OrientationStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//OrientationStyle/HORIZONTAL"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//OrientationStyle/VERTICAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//HorizontalAlignmentStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//HorizontalAlignmentStyle/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//HorizontalAlignmentStyle/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//HorizontalAlignmentStyle/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//HorizontalAlignmentStyle/FILL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//VerticalAlignmentStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//VerticalAlignmentStyle/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//VerticalAlignmentStyle/TOP"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//VerticalAlignmentStyle/BOTTOM"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//VerticalAlignmentStyle/FILL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//MultiplicityStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MultiplicityStyle/SINGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MultiplicityStyle/MULTI"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//ComboStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ComboStyle/DROP_DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ComboStyle/READ_ONLY"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ComboStyle/SIMPLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//MenuStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuStyle/POP_UP"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuStyle/DROP_DOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//MenuItemStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuItemStyle/PUSH"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuItemStyle/CASCADE"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuItemStyle/CHECK"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuItemStyle/RADIO"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//MenuItemStyle/SEPARATOR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//ModalStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ModalStyle/SYSTEM_MODAL"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ModalStyle/APPLICATION_MODAL"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//ModalStyle/PRIMARY_MODAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//TrimStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//TrimStyle/NOT_TRIM"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//TrimStyle/SHELL_TRIM"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//TrimStyle/DIALOG_TRIM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//LineStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//LineStyle/CUSTOM"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//LineStyle/DASH"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//LineStyle/DASHDOT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//LineStyle/DASHDOTDOT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//LineStyle/DOT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//LineStyle/SOLID"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//CapStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//CapStyle/FLAT"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//CapStyle/ROUND"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//CapStyle/SQUARE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//JoinStyle">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//JoinStyle/BEVEL"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//JoinStyle/MITER"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//JoinStyle/ROUND"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="swt.ecore#//SortDirection">
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//SortDirection/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//SortDirection/UP"/>
+      <genEnumLiterals ecoreEnumLiteral="swt.ecore#//SortDirection/DOWN"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="swt.ecore#//ImageRef"/>
+    <genDataTypes ecoreDataType="swt.ecore#//URI"/>
+    <genDataTypes ecoreDataType="swt.ecore#//Point"/>
+    <genDataTypes ecoreDataType="swt.ecore#//ViewerInput"/>
+    <genClasses image="false" ecoreClass="swt.ecore#//Widget">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Widget/style"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//Layout">
+      <genTypeParameters ecoreTypeParameter="swt.ecore#//Layout/T"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//LayoutData"/>
+    <genClasses image="false" ecoreClass="swt.ecore#//Control">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//Control/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/borderStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/textOrientationStyle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//Control/layoutData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/touchEnabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/toolTipText"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//Control/background"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//Control/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Control/size"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//AbstractComposite">
+      <genTypeParameters ecoreTypeParameter="swt.ecore#//AbstractComposite/T"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//AbstractComposite/controls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//AbstractComposite/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Composite"/>
+    <genClasses ecoreClass="swt.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Group/text"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Canvas"/>
+    <genClasses image="false" ecoreClass="swt.ecore#//Decorations">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Decorations/maximized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Decorations/minimized"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//Decorations/menuBar"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Shell">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Shell/modalStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Shell/trimStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Shell/fullScreen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Shell/alpha"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//Shell/defaultButton"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//AbstractMenu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//AbstractMenu/textOrientationStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//AbstractMenu/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//AbstractMenu/visible"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//AbstractMenu/items"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Menu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Menu/menuStyle"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//Menu/parentItem"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//MenuBar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//MenuBar/parent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//Labeled">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Labeled/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Labeled/image"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//Item"/>
+    <genClasses ecoreClass="swt.ecore#//MenuItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//MenuItem/menuItemStyle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//MenuItem/menu"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//MenuItem/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//MenuItem/accelerator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//MenuItem/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//MenuItem/selection"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//ToolBar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//ToolBar/items"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//ToolBar/orientationStyle"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//ToolItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//ToolItem/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//ToolItem/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//ToolItem/hotImage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//ToolItem/toolTipText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//ToolItem/selection"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//CoolBar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//CoolBar/items"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//CoolBar/orientationStyle"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//CoolItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//CoolItem/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//CoolItem/control"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//CoolItem/minimumSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//CoolItem/preferredSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//CoolItem/size"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Label"/>
+    <genClasses ecoreClass="swt.ecore#//Separator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Separator/orientationStyle"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Button/buttonStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Button/arrowStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Button/selection"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/multiplicityStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/editable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/echoChar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/tabs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/textLimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/topIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Text/message"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//PasswordText"/>
+    <genClasses ecoreClass="swt.ecore#//SearchText"/>
+    <genClasses image="false" ecoreClass="swt.ecore#//IntervalControl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//IntervalControl/minimum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//IntervalControl/maximum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//IntervalControl/selection"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//IntervalSelector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//IntervalSelector/orientationStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//IntervalSelector/increment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//IntervalSelector/pageIncrement"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Slider">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Slider/thumb"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Spinner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Spinner/digits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Spinner/textLimit"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//ProgressBar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//ProgressBar/state"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//DateTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//DateTime/seconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//DateTime/minutes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//DateTime/hours"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//DateTime/day"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//DateTime/month"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//DateTime/year"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Browser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Browser/javascriptEnabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Browser/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Browser/url"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//AbstractList">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//AbstractList/items"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//AbstractList/selectionIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//List">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//List/multiplicityStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//List/selectionIndices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//List/selection"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Combo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Combo/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Combo/textLimit"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//TabFolder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//TabFolder/items"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//TabItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//TabItem/control"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//TabItem/toolTipText"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//Color"/>
+    <genClasses ecoreClass="swt.ecore#//SystemColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//SystemColor/color"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//RGBColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RGBColor/red"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RGBColor/green"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RGBColor/blue"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Font">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Font/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Font/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Font/height"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//FillLayout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FillLayout/orientationStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FillLayout/marginWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FillLayout/marginHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FillLayout/spacing"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//RowLayout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/orientationStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/marginWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/marginHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/spacing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/wrap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/pack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/justify"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/marginLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/marginTop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/marginRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowLayout/marginBottom"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//RowData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowData/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowData/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//RowData/exclude"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//GridLayout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/numColumns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/makeColumnsEqualWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/marginWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/marginHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/marginLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/marginTop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/marginRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/marginBottom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/horizontalSpacing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridLayout/verticalSpacing"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//GridData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/verticalAlignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/horizontalAlignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/widthHint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/heightHint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/horizontalIndent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/verticalIndent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/horizontalSpan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/verticalSpan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/grabExcessHorizontalSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/grabExcessVerticalSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/minimumWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/minimumHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//GridData/exclude"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//FormLayout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/marginWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/marginHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/spacing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/marginLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/marginTop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/marginRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormLayout/marginBottom"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//FormData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormData/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormData/height"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//FormData/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//FormData/top"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//FormData/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//FormData/bottom"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//FormAttachment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormAttachment/alignment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//FormAttachment/control"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormAttachment/denominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormAttachment/numerator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//FormAttachment/offset"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//LineAttributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/cap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/join"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/dash"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/dashOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//LineAttributes/miterLimit"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//TreeColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//TreeColumn/toolTipText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//TreeColumn/displayText"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//Tree">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//Tree/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Tree/headerVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Tree/linesVisible"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//Tree/sortColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Tree/sortDirection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference swt.ecore#//Tree/viewer"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="swt.ecore#//Viewer">
+      <genTypeParameters ecoreTypeParameter="swt.ecore#//Viewer/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference swt.ecore#//Viewer/control"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute swt.ecore#//Viewer/input"/>
+    </genClasses>
+    <genClasses ecoreClass="swt.ecore#//TreeViewer"/>
+  </genPackages>
+</genmodel:GenModel>

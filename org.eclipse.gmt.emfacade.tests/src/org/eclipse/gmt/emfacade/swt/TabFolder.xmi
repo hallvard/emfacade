@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<swt:TabFolder xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swt="org.eclipse.gmt.emfacade.swt">
+  <items text="Text">
+	  <control xsi:type="swt:Composite">
+	    <controls xsi:type="swt:Label" text="Label"/>
+	    <controls xsi:type="swt:Text" borderStyle="BORDER" text="Text"/>
+	    <controls xsi:type="swt:PasswordText" borderStyle="BORDER" text="Password Text"/>
+	    <controls xsi:type="swt:SearchText" text="Search Text"/>
+	    <layout xsi:type="swt:FillLayout"/>
+	  </control>
+	</items>
+  <items text="Buttons">
+	  <control xsi:type="swt:Composite">
+	    <controls xsi:type="swt:Button" text="Toggle Button"/>
+	    <controls xsi:type="swt:Button" text="Push Button" buttonStyle="PUSH"/>
+	    <controls xsi:type="swt:Button" text="Check Box" buttonStyle="CHECK"/>
+	    <controls xsi:type="swt:Button" text="Radio Button" buttonStyle="RADIO"/>
+	    <controls xsi:type="swt:Button" text="Arrow Button" buttonStyle="ARROW" arrowStyle="RIGHT"/>
+	    <layout xsi:type="swt:FillLayout"/>
+	  </control>
+	</items>
+</swt:TabFolder>

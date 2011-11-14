@@ -1,0 +1,65 @@
+facade org.eclipse.gmt.emfacade.draw2d as draw2dFacade uses swtFacade
+
+import org.eclipse.gmt.emfacade.builder.strategies.* // strategies
+import org.eclipse.draw2d.*
+
+package org.eclipse.gmt.emfacade
+
+feature-mapping-defaults
+	strategy GetSetStrategy1
+
+class draw2d.Figure -> IFigure
+	create-with new Figure()
+	map enabled, visible, opaque, focusTraversable
+	map children using strategy SizeGetSetAddRemoveStrategyN
+		method getCount(IFigure) -> iFigure.children.size
+		method get(IFigure,int) -> iFigure.children.get(intValue) as IFigure
+		method add(IFigure,int,IFigure) -> iFigure_1.add(iFigure_2, intValue)
+		method remove(IFigure,int) -> iFigure.remove(iFigure.children.get(intValue) as IFigure)
+		
+	map bounds, minimumSize, preferredSize, maximumSize
+	map toolTip
+	map backgroundColor, foregroundColor, font
+	map border
+
+class draw2d.Label -> Label
+	map text, textAlignment, textPlacement
+	map iconAlignment, iconTextGap
+
+class draw2d.Shape -> Shape
+	map fill, fillXOR, outline, outlineXOR
+	map alpha, antialias
+	map lineWidthFloat
+	map lineStyle, lineCap, lineJoin
+//	map lineDash
+	map lineDashOffset, lineMiterLimit
+
+class draw2d.RectangleFigure -> RectangleFigure
+
+class draw2d.RoundedRectangle -> RoundedRectangle
+	map cornerDimensions
+
+class draw2d.Ellipse -> Ellipse
+
+class draw2d.Triangle -> Triangle
+	map orientation, direction
+
+class draw2d.Border -> Border
+
+class draw2d.LabeledBorder -> LabeledBorder
+
+class draw2d.GroupBoxBorder -> GroupBoxBorder
+class draw2d.TitleBarBorder -> TitleBarBorder
+
+class draw2d.FrameBorder -> FrameBorder
+
+//class draw2d.FlowFigure -> FlowFigure
+
+class draw2d.BlockFlow -> text.BlockFlow
+	map orientation
+//	map horizontalAlignment
+//		method get(BlockFlow,Integer) -> blockFlow.localHorizontalAlignment
+
+type draw2d.Alignment -> Integer -> model.value
+type draw2d.Orientation -> Integer -> model.value
+type draw2d.Direction -> Integer -> model.value

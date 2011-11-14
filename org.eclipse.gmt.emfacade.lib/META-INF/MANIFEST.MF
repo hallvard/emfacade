@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Lib
+Bundle-SymbolicName: org.eclipse.gmt.emfacade.lib
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.xtext.xbase.lib;bundle-version="2.1.0"
+Export-Package: org.eclipse.gmt.emfacade.lib

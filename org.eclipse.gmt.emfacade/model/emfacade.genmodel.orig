@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gmt.emfacade/src"
+    modelPluginID="org.eclipse.gmt.emfacade" modelName="Emfacade" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>emfacade.ecore</foreignModel>
+  <genPackages prefix="Emfacade" basePackage="org.eclipse.gmt" disposableProviderFactory="true"
+      ecorePackage="emfacade.ecore#/">
+    <genClasses ecoreClass="emfacade.ecore#//EClassMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/mClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EClassMapping/eClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//EClassMapping/jClass"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="emfacade.ecore#//EFeatureMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/eFeature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfacade.ecore#//EFeatureMapping/jProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/jField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//EFeatureMapping/jMethods"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EAttributeMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EAttributeMapping/eAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//EReferenceMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//EReferenceMapping/eReference"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//JClass">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//JClass/mClass"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//JMethod">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//JMethod/mMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//JField">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//JField/mField"/>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//FeatureMappingStrategy">
+      <genOperations ecoreOperation="emfacade.ecore#//FeatureMappingStrategy/createFeatureMapping">
+        <genParameters ecoreParameter="emfacade.ecore#//FeatureMappingStrategy/createFeatureMapping/mClass"/>
+        <genParameters ecoreParameter="emfacade.ecore#//FeatureMappingStrategy/createFeatureMapping/jProperty"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="emfacade.ecore#//BeanMappingStrategy"/>
+    <genClasses ecoreClass="emfacade.ecore#//FacadeModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/JModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfacade.ecore#//FacadeModel/classMappings"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

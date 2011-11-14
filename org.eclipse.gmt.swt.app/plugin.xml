@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<!--
+   <extension-point id="eventHandler" name="Event Handler" schema="schema/eventHandler.exsd"/>
+
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<file-association
+			content-type="org.eclipse.emf.ecore.xmi"
+			file-extensions="wazapp"
+		/>
+	</extension>
+	
+   <extension
+         point="org.eclipse.ui.views">
+
+      <view id="org.eclipse.pmf.wazaabi.ui.swt.EditorModelView"
+            name="Wazaabi Preview"
+            category="org.eclipse.pmf.wazaabi.ui.swt.category"
+            class="org.eclipse.gmt.swt.views.PreviewView"
+            >
+      </view>
+
+      <view id="org.eclipse.pmf.wazaabi.ui.swt.PaletteView"
+            name="Wazaabi Palette"
+            category="org.eclipse.pmf.wazaabi.ui.swt.category"
+            class="org.eclipse.gmt.swt.views.PaletteView"
+            >
+      </view>
+
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+      		id="org.eclipse.pmf.wazaabi.ui.swt.app.editor"
+            class="org.eclipse.gmt.swt.app.ModelApp"
+            contributorClass="org.eclipse.emf.ecore.presentation.EcoreActionBarContributor$Reflective"
+            default="false"
+            extensions="wazapp"
+            name="Wazaabi Application">
+         <contentTypeBinding contentTypeId="org.eclipse.emf.ecore.xmi"/>
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.pmf.wazaabi.ui.swt.app.eventHandler">
+      <eventHandler
+            handlerClass="org.eclipse.pmf.wazaabi.engine.swt.adapter.eventhandlers.PluginEventHandler"
+            uriPrefix="platform:/plugin/">
+      </eventHandler>
+      <eventHandler
+            handlerClass="org.eclipse.pmf.wazaabi.engine.swt.adapter.eventhandlers.JavaEventHandler"
+            uriPrefix="urn:java:">
+      </eventHandler>
+      <eventHandler
+            handlerClass="org.eclipse.gmt.swt.app.JavascriptEventHandler"
+            uriPrefix="js:">
+      </eventHandler>
+   </extension>
+	-->
+	
+</plugin>
